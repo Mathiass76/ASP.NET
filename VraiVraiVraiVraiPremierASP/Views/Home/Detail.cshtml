@@ -1,0 +1,25 @@
+﻿@model personne
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Detail de la personne </h1>
+    <table>
+        <tr>
+            <th colspan="2" align="center">Personne</th>
+        </tr>
+        <tr>
+            <td>Nom :</td>
+            <td>
+                @Model.Nom
+            </td>
+        </tr>
+        <tr>
+            <td>Prenom :</td>
+            <td>
+                @Model.Prenom
+            </td>
+        </tr>
+    </table>
+</div>

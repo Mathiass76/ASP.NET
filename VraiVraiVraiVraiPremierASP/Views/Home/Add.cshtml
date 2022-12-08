@@ -1,0 +1,32 @@
+﻿@model Personne 
+@{
+    ViewData["Title"] = "Add";
+}
+
+<div class="text-center">
+    <h1 class="dipslay-4">Ajouter une personne</h1>
+    @using (Html.BeginForm("Add", "Home", FormMethod.Post))
+    {
+        <table>
+            <tr> 
+                <th colspan="2" align="center">Personne</th>
+            </tr>
+            <tr>
+                <td>Nom :</td>
+                <td>
+                    @Html.TextBoxFor(m => m.Nom)
+                </td>
+            </tr>
+            <tr>
+                <td>Prénom :</td>
+                <td>
+                    @Html.TextBoxFor(m => m.Prenom)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Ajouter"/></td>
+            </tr>
+        </table>
+    }
+</div>

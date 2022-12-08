@@ -1,0 +1,31 @@
+﻿@model List<Personne>
+@{
+    ViewData["Title"] = "List";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Liste des personnes</h1>
+    <a asp-controller="Home" asp-action="Add">Ajouter une personne</a>
+
+    <table>
+        <tr>
+            <th align="center">ID</th>
+            <th align="center">Nom</th>
+            <th align="center">Prénom</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-controller="Home" asp-action="Detail" asp-route-id=@item.Id>@item.Id</a>
+                </td>
+                <td>
+                    @item.Nom
+                </td>
+                <td>
+                    @item.Prenom
+                </td>
+            </tr>
+        }
+    </table>
+</div>
